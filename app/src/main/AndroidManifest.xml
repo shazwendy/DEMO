@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ViewNoteActivity"
+            android:label="@string/title_activity_view_note"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".TrialActivity"
             android:label="@string/title_activity_trial"
             android:parentActivityName=".MainActivity"

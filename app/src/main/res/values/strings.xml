@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">Demo</string>
+    <string name="app_name">Demo.</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_add_note">AddNoteActivity</string>
     <string name="title_activity_trial">TrialActivity</string>
+    <string name="title_activity_view_note">ViewNoteActivity</string>
+    <string name="view_note">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid assumenda atque dignissimos eius facilis fuga impedit in, iste magnam numquam perferendis praesentium quae quos tempora ut vel velit voluptas.</string>
 </resources>

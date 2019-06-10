@@ -6,13 +6,17 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     TextView shazwendy;
+    Button btnViewNoteActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,9 +32,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         shazwendy = (TextView) findViewById(R.id.shazwendy);
         shazwendy.setText("The quick brown fox jumped over the lazy dog");
-    }
+
+        btnViewNoteActivity=findViewById(R.id.btnViewNote);
+        btnViewNoteActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+            startActivity(new Intent(getBaseContext(), ViewNoteActivity.class));
+        };
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

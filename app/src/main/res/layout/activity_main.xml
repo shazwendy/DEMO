@@ -26,6 +26,16 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <Button
+            android:id="@+id/btnViewNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:text="View Note"
+            android:textAllCaps="false"/>
+
         <TextView
             android:id="@+id/shazwendy"
             android:layout_width="wrap_content"

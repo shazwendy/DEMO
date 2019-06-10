@@ -7,10 +7,14 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.demo.database.DatabaseHelper;
+import com.example.demo.database.Note;
 
 
 public class AddNoteActivity extends AppCompatActivity {
@@ -19,6 +23,8 @@ public class AddNoteActivity extends AppCompatActivity {
     Button btnAddPhoto;
     Button btnAddVoiceNote;
     Button btnSave;
+    String title;
+    String noteText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +43,20 @@ public class AddNoteActivity extends AppCompatActivity {
        btnSave.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
+               title=etTitle.getText().toString();
+               noteText=etNote.getText().toString();
+               Note note= new Note(title,noteText);
+               DatabaseHelper databaseHelper = new DatabaseHelper(getBaseContext(), "notes", null, 1);
+               long insert = databaseHelper.insertNote(note);
+               Log.d("insertnote","note insertion value" + insert);
+//               Log.d("title", title);
+//               Log.d("note", note);
                Toast.makeText(getBaseContext(),"You have clicked the save button",Toast.LENGTH_LONG).show();
+
            }
        });
+
+
 
 
 
